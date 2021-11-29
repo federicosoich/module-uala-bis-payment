@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+
+    <menu>
+        <add id="FS_UalaBis::bis"
+             title="Uala Bis Payment"
+             module="FS_UalaBis"
+             sortOrder="-1"
+             resource="FS_UalaBis::bis"
+             parent="Magento_Backend::stores" />
+
+        <add id="FS_UalaBis::bis_settings"
+             title="Payment Settings"
+             module="FS_UalaBis"
+             sortOrder="1"
+             resource="FS_UalaBis::bis"
+             parent="FS_UalaBis::bis"
+             action="adminhtml/system_config/edit/section/payment/" />
+    </menu>
+
+</config>

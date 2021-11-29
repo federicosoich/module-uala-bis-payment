@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+                <group id="ualabis" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                    <label>Uala Bis Payment</label>
+
+                    <field id="active" translate="label comment" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+
+                    <field id="title" translate="label comment" sortOrder="2" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Title</label>
+                        <comment>You can change this message</comment>
+                    </field>
+
+                    <field id="message" translate="label comment" sortOrder="3" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Checkout Message</label>
+                        <comment>You can change this message</comment>
+                    </field>
+
+                    <field id="user_name" translate="label comment" sortOrder="4" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>userName</label>
+                        <comment>Uala Bis userName</comment>
+                    </field>
+                  
+                    <field id="client_id" translate="label comment" sortOrder="6" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>clientId</label>
+                        <comment>You need to change this values for go live</comment>
+                    </field>
+
+                    <field id="client_secret_id" translate="label comment" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>clientSecretId</label>
+                        <comment>You need to change this values for go live</comment>
+                    </field>
+
+                    <field id="granttype" translate="label comment" sortOrder="10" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>grantType</label>
+                    </field>
+
+                    <field id="token_url" translate="label comment" sortOrder="300" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Token Url</label>
+                    </field>
+
+                    <field id="checkout_url" translate="label comment" sortOrder="400" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Checkout Url</label>
+                    </field>
+
+                </group>
+        </section>
+    </system>
+</config>
