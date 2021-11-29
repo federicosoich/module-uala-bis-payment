@@ -3,7 +3,7 @@
 This Extension is used to make payments using Uala Bis API in Argentina.
 
 - Allow end user set credentials, checkout message and name of payment method 
-- Generate pending orders using return parameters to change to cancel or processing (and invoice)
+- Generate pending orders and using return parameters to change to cancel or processing (and invoice)
 - Add validation to prevent unexpected changes on status using urls
 - Can be used in production / test mode just changing credentials
 
