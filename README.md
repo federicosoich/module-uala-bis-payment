@@ -19,9 +19,11 @@ This Extension is used to make payments using Uala Bis API in Argentina.
 Then you'll need to activate the module.
 
 ```
-bin/magento module:enable FS_UalaBis
 bin/magento setup:upgrade
+bin/magento setup:di:compile
 bin/magento cache:clean
+bin/magento cache:flush
+
 ```
 
 ## Uninstall
