@@ -30,14 +30,14 @@ class Cancel extends \Magento\Framework\App\Action\Action
             $postData = $this->getRequest()->getParams();
             if (!empty($postData) && isset($postData['code'])) {
                 $this->order->loadByIncrementId($this->helper->decodeUrl($postData['code']));
-                if ($this->_order->getStatus()=='pending')
+                if ($this->order->getStatus()=='pending')
                     {
-                        $this->_order->setState(\Magento\Sales\Model\Order::STATE_CANCELED, true);
-                        $this->_order->setStatus(\Magento\Sales\Model\Order::STATE_CANCELED);
-                        foreach ($this->_order->getAllItems() as $item) { // Cancel order items
+                        $this->order->setState(\Magento\Sales\Model\Order::STATE_CANCELED, true);
+                        $this->order->setStatus(\Magento\Sales\Model\Order::STATE_CANCELED);
+                        foreach ($this->order->getAllItems() as $item) { // Cancel order items
                             $item->cancel();
                         }
-                        $this->_order->save();
+                        $this->order->save();
                         $this->_redirect('checkout/onepage/failure');
                     } else 
                     throw new NotFoundException(__('Order Status is incorrect.'));

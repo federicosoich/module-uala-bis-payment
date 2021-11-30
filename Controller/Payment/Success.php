@@ -12,23 +12,23 @@ use \FS\UalaBis\Helper\Data;
 class Success extends \Magento\Framework\App\Action\Action
 {
     public $context;
-    protected $_invoiceService;
-    protected $_order;
-    protected $_transaction;
-    protected $_helper;
+    protected $invoiceService;
+    protected $order;
+    protected $transaction;
+    protected $helper;
 
     public function __construct(
         Context $context,
-        InvoiceService $_invoiceService,
-        Order $_order,
-        Transaction $_transaction,
-        Data $_helper
+        InvoiceService $invoiceService,
+        Order $order,
+        Transaction $transaction,
+        Data $helper
     ) {
-        $this->_invoiceService = $_invoiceService;
-        $this->_transaction    = $_transaction;
-        $this->_order          = $_order;
-        $this->context         = $context;
-        $this->helper          = $_helper;
+        $this->invoiceService = $invoiceService;
+        $this->transaction    = $transaction;
+        $this->order          = $order;
+        $this->context        = $context;
+        $this->helper         = $helper;
         parent::__construct($context);
     }
 
@@ -37,19 +37,19 @@ class Success extends \Magento\Framework\App\Action\Action
         try {
             $postData = $this->getRequest()->getParams();
             if (!empty($postData) && isset($postData['code'])) {
-                $this->_order->loadByIncrementId($this->helper->decodeUrl($postData['code']));
-                if ($this->_order->getStatus()=='pending')
+                $this->order->loadByIncrementId($this->helper->decodeUrl($postData['code']));
+                if ($this->order->getStatus()=='pending')
                 {
-                    $this->_order->setState(\Magento\Sales\Model\Order::STATE_PROCESSING, true);
-                    $this->_order->setStatus(\Magento\Sales\Model\Order::STATE_PROCESSING);
-                    $this->_order->save();
-                    if ($this->_order->canInvoice()) {
-                        $invoice = $this->_invoiceService->prepareInvoice($this->_order);
+                    $this->order->setState(\Magento\Sales\Model\Order::STATE_PROCESSING, true);
+                    $this->order->setStatus(\Magento\Sales\Model\Order::STATE_PROCESSING);
+                    $this->order->save();
+                    if ($this->order->canInvoice()) {
+                        $invoice = $this->invoiceService->prepareInvoice($this->order);
                         $invoice->register();
                         $invoice->save();
-                        $transactionSave = $this->_transaction->addObject($invoice)->addObject($invoice->getOrder());
+                        $transactionSave = $this->transaction->addObject($invoice)->addObject($invoice->getOrder());
                         $transactionSave->save();
-                        $this->_order->addStatusHistoryComment(__('Invoiced', $invoice->getId()))->setIsCustomerNotified(false)->save();
+                        $this->order->addStatusHistoryComment(__('Invoiced', $invoice->getId()))->setIsCustomerNotified(false)->save();
                     }
                 $this->_redirect('checkout/onepage/success');
                 }   else 
