@@ -3,7 +3,7 @@
 This Extension is used to make payments using Uala Bis API in Argentina.
 
 - Allow end user set credentials, checkout message and name of payment method 
-- Generate pending orders using return parameters to change to cancel or processing (and invoice)
+- Generate pending orders and using return parameters to change to cancel or processing (and invoice)
 - Add validation to prevent unexpected changes on status using urls
 - Can be used in production / test mode just changing credentials
 
@@ -19,9 +19,11 @@ This Extension is used to make payments using Uala Bis API in Argentina.
 Then you'll need to activate the module.
 
 ```
-bin/magento module:enable FS_UalaBis
 bin/magento setup:upgrade
+bin/magento setup:di:compile
 bin/magento cache:clean
+bin/magento cache:flush
+
 ```
 
 ## Uninstall
