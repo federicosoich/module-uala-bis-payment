@@ -9,7 +9,7 @@ use \Magento\Checkout\Model\Type\Onepage;
 use \Magento\Framework\HTTP\Client\Curl;
 use \Magento\Framework\Url\DecoderInterface;
 use \Magento\Framework\Url\EncoderInterface;
-
+use \Magento\Framework\Message\ManagerInterface;
 
 
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
@@ -23,6 +23,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public $store;
     protected $checkout;
     protected $curl;
+    protected $messageManager;
     
 
     public function __construct(
@@ -32,7 +33,8 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         Onepage $checkout,
         Curl $curl,
         EncoderInterface $urlEncoder,
-        DecoderInterface $urlDecoder
+        DecoderInterface $urlDecoder,
+        ManagerInterface $messageManager
     ) {
         $this->order             = $order;
         $this->store             = $store;
@@ -41,6 +43,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         $this->curl              = $curl;
         $this->urlEncode         = $urlEncoder;
         $this->urlDecode         = $urlDecoder;
+        $this->messageManager    = $messageManager;
     }
 
 
@@ -64,6 +67,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             $resp = curl_exec($curl);
             curl_close($curl);
             $arre=json_decode($resp, true);
+            if (!isset($arre['access_tokenn'])){
+                $this->messageManager->addError(__("No pudimos generar el token para realizar el pago."));
+                return "/";
+            }
             //generate order
             $url = $this->getCheckoutUrl();
             $curl = curl_init($url);
