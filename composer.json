@@ -3,6 +3,7 @@
     "description": "Uala Bis Payment Module",
     "type": "magento2-module",
     "version": "0.1.0",
+    "minimum-stability":"dev",
     "require": {
       "php": "^7.0.0"
     },
