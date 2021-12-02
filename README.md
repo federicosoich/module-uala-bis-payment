@@ -7,7 +7,7 @@ This Extension is used to make payments using <a href="https://www.ualabis.com.a
 - Add validation to prevent unexpected changes on status using urls
 - Can be used in production / test mode just changing credentials
 
-![](https://i.imgur.com/3oBFJ6o.png "Checkout with name and message")
+![Checkout with name and message](https://i.imgur.com/3oBFJ6os.png "Checkout with name and message")
 
 
 
