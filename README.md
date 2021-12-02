@@ -1,15 +1,11 @@
 # FS_UalaBis for Magento 2
 
-This Extension is used to make payments using <a href="https://www.ualabis.com.ar" target="_blank">Uala Bis</a> API in Argentina.
+This Extension is used to make payments using Uala Bis API in Argentina.
 
 - Allow end user set credentials, checkout message and name of payment method 
 - Generate pending orders and using return parameters back and change to order status cancel or processing (and create invoice)
 - Add validation to prevent unexpected changes on status using urls
 - Can be used in production / test mode just changing credentials
-
-![Checkout with name and message](https://i.imgur.com/3oBFJ6ob.png "Checkout with name and message")
-
-
 
 ## Manual Installation
 
