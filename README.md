@@ -13,11 +13,6 @@ This Extension is used to make payments using Uala Bis API in Argentina.
 - Download module ZIP
 - Copy to folder
 
-![Checkout with name and message](https://i.imgur.com/0BOSQ2B.png "Checkout with name and message")
-![Redirect to Uala Bis](https://i.imgur.com/9kkmwTO.png "Redirect to Uala Bis")
-
-
-
 Then you'll need to activate the module.
 
 ```
