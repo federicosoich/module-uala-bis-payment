@@ -67,8 +67,8 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             $resp = curl_exec($curl);
             curl_close($curl);
             $arre=json_decode($resp, true);
-            if (!isset($arre['access_tokenn'])){
-                $this->messageManager->addError(__("No pudimos generar el token para realizar el pago."));
+            if (isset($arre['code'])){
+                $this->messageManager->addError(__('Uala Bis API token error: '.$arre['description']));
                 return "/";
             }
             //generate order
@@ -86,12 +86,16 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             "description": "Order # '.$order->getIncrementId().'",
             "userName": "'.$userName.'",
             "callback_fail": "'.$this->store->getStore()->getBaseUrl().'ualabis/payment/failure/code/'.$this->encodeUrl($order->getIncrementId()).'",
-            "callback_success": "'.$this->store->getStore()->getBaseUrl().'ualabis/payment/success/code/'.$this->encodeUrl($order->getIncrementId()).'"
+            "callback_successs": "'.$this->store->getStore()->getBaseUrl().'ualabis/payment/success/code/'.$this->encodeUrl($order->getIncrementId()).'"
             }';
             curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
             $resp = curl_exec($curl);
             $arre=json_decode($resp, true);
             curl_close($curl);    
+            if (isset($arre['code'])){
+                $this->messageManager->addError(__('Uala Bis API checkout error: '.$arre['description']));
+                return "/";
+            }
             return $arre['links']['checkoutLink'];
         }
         catch(Exception $e) {
