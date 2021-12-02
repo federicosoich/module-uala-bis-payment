@@ -86,7 +86,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             "description": "Order # '.$order->getIncrementId().'",
             "userName": "'.$userName.'",
             "callback_fail": "'.$this->store->getStore()->getBaseUrl().'ualabis/payment/failure/code/'.$this->encodeUrl($order->getIncrementId()).'",
-            "callback_successs": "'.$this->store->getStore()->getBaseUrl().'ualabis/payment/success/code/'.$this->encodeUrl($order->getIncrementId()).'"
+            "callback_success": "'.$this->store->getStore()->getBaseUrl().'ualabis/payment/success/code/'.$this->encodeUrl($order->getIncrementId()).'"
             }';
             curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
             $resp = curl_exec($curl);
