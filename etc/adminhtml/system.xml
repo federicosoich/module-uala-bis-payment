@@ -42,10 +42,12 @@
 
                     <field id="token_url" translate="label comment" sortOrder="300" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Token Url</label>
+                        <comment>https://auth.stage.ua.la/1/auth/token or https://auth.prod.ua.la/1/auth/token</comment>               
                     </field>
 
                     <field id="checkout_url" translate="label comment" sortOrder="400" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Checkout Url</label>
+                        <comment>https://checkout.stage.ua.la/1/checkout or https://checkout.prod.ua.la</comment>               
                     </field>
 
                 </group>
