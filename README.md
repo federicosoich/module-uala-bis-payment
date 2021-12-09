@@ -51,8 +51,19 @@ Please make sure to update tests as appropriate.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Screenshots
-## Module enabled, name and message configurable.
 <a href="https://imgur.com/0BOSQ2B"><img src="https://i.imgur.com/0BOSQ2B.png"/></a><br>
-## Redirect to Uala Bis.
+Module enabled, name and message configurable.<br><br>
 <a href="https://imgur.com/9kkmwTO"><img src="https://i.imgur.com/9kkmwTO.png"/></a><br>
-## Redirect to Uala Bis.
+Redirect to Uala Bis.<br><br>
+<a href="https://imgur.com/z0njCiX"><img src="https://i.imgur.com/z0njCiX.png"/></a><br>
+Success payment in Uala Bis.<br><br>
+<a href="https://imgur.com/0lQq9vY"><img src="https://i.imgur.com/0lQq9vY.png"/></a><br>
+Redirect to success.<br><br>
+<a href="https://imgur.com/wajxQIJ"><img src="https://i.imgur.com/wajxQIJ.png"/></a><br>
+Redirect to failure.<br><br>
+<a href="https://imgur.com/9gMC4oD"><img src="https://i.imgur.com/9gMC4oD.png"/></a><br>
+Configuration.<br><br>
+<a href="https://imgur.com/BSbWcjM"><img src="https://i.imgur.com/BSbWcjM.png"/></a>
+Backend Sales Updated.<br><br>
+<a href="https://imgur.com/3Uo28Sm"><img src="https://i.imgur.com/3Uo28Sm.png"/></a>
+Order Info
