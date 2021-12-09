@@ -47,7 +47,7 @@
 
                     <field id="checkout_url" translate="label comment" sortOrder="400" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Checkout Url</label>
-                        <comment>https://checkout.stage.ua.la/1/checkout or https://checkout.prod.ua.la</comment>               
+                        <comment>https://checkout.stage.ua.la/1/checkout or https://checkout.prod.ua.la/1/checkout</comment>               
                     </field>
 
                 </group>
