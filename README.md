@@ -63,7 +63,7 @@ Redirect to success.<br><br>
 Redirect to failure.<br><br>
 <a href="https://imgur.com/9gMC4oD"><img src="https://i.imgur.com/9gMC4oD.png"/></a><br>
 Configuration.<br><br>
-<a href="https://imgur.com/BSbWcjM"><img src="https://i.imgur.com/BSbWcjM.png"/></a>
+<a href="https://imgur.com/BSbWcjM"><img src="https://i.imgur.com/BSbWcjM.png"/></a><br>
 Backend Sales Updated.<br><br>
-<a href="https://imgur.com/3Uo28Sm"><img src="https://i.imgur.com/3Uo28Sm.png"/></a>
+<a href="https://imgur.com/3Uo28Sm"><img src="https://i.imgur.com/3Uo28Sm.png"/></a><br>
 Order Info
