@@ -53,3 +53,8 @@ Please make sure to update tests as appropriate.
 ## Screenshots
 
 <a href="https://imgur.com/0BOSQ2B"><img src="https://i.imgur.com/0BOSQ2B.png"/></a>
+Module enabled, name and message configurable.
+<br>
+<a href="https://imgur.com/9kkmwTO"><img src="https://i.imgur.com/9kkmwTO.png"/></a>
+Redirect to Uala Bis.
+<br>
