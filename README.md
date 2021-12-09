@@ -51,10 +51,8 @@ Please make sure to update tests as appropriate.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Screenshots
-
+## Module enabled, name and message configurable.
 <a href="https://imgur.com/0BOSQ2B"><img src="https://i.imgur.com/0BOSQ2B.png"/></a><br>
-Module enabled, name and message configurable.
-<br>
+## Redirect to Uala Bis.
 <a href="https://imgur.com/9kkmwTO"><img src="https://i.imgur.com/9kkmwTO.png"/></a><br>
-Redirect to Uala Bis.
-<br>
+## Redirect to Uala Bis.
