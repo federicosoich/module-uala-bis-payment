@@ -49,3 +49,7 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Screenshots
+
+<a href="https://imgur.com/0BOSQ2B"><img src="https://i.imgur.com/0BOSQ2B.png"/></a>
